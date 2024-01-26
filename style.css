@@ -1,5 +1,5 @@
 body { 
-    background-color: #fe9801; 
+    background-color: peachpuff; 
     color: black; 
     text-align: center; 
     } 
@@ -10,6 +10,12 @@ body {
     align-items: center; 
     } 
     
+    .counters { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    } 
+
     .heading { 
     margin-bottom: 20px; 
     font-size: 3rem; 
@@ -49,7 +55,7 @@ body {
     } 
     
     .quote { 
-    background-color: #ccda46; 
+    background-color: gre; 
     font-size: 1.5rem; 
     margin: 10px; 
     padding: 25px; 
@@ -57,7 +63,7 @@ body {
     } 
     
     .input_area { 
-    background-color: #f5f5c6; 
+    background-color: lemonchiffon; 
     height: 80px; 
     width: 40%; 
     font-size: 1.5rem; 
@@ -78,7 +84,7 @@ body {
     } 
     
     .incorrect_char { 
-    color: red; 
+    color: coral; 
     text-decoration: underline; 
     } 
     
