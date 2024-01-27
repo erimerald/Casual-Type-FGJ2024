@@ -7,7 +7,7 @@ let quotes_array = [
   "It always begins with a challenge.",
   "The coach went to the bank to get his quarterback.",
   "Ghosts are bad liars because you can see right through them.",
-  "Dogs can't operate MRI machines but catscan",
+  "Dogs can't operate MRI machines but catscan.",
   "I used to play piano by ear, but now I use my hands.",
   "I just don't trust stairs, they're always up to something.",
   "I told my doctor I heard buzzing, but she said it's just a bug that's going around.",
