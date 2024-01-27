@@ -5,10 +5,13 @@ let TIME_LIMIT = 60;
 // define quotes to be used
 let quotes_array = [
   "It always begins with a challenge.",
-  "If cats looked like frogs we'd realize what nasty, cruel little bastards they are. Style. That's what people remember.",
-  "I would like to see anyone, prophet, king or God, convince a thousand cats to do the same thing at the same time.",
-  "The only thing a cat worries about is what's happening right now. As we tell the kittens, you can only wash one paw at a time.",
-  "It is better to begin the journey, make some mistakes and correct your course, than to wait until everything is perfect and never even start.",
+  "The coach went to the bank to get his quarterback.",
+  "Ghosts are bad liars because you can see right through them.",
+  "Dogs can't operate MRI machines but catscan",
+  "I used to play piano by ear, but now I use my hands.",
+  "I just don't trust stairs, they're always up to something.",
+  "I told my doctor I heard buzzing, but she said it's just a bug that's going around.",
+  "A ship carrying red paint and a ship carrying blue paint collide in the middle of the ocean. Both crews were marooned.",
 ];
 
 // selecting required elements
