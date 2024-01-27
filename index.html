@@ -32,15 +32,11 @@ SOFTWARE.-->
 <body>
     <!-- link the JavaScript file here -->
     <script defer src="type-in.js"></script>
+    <div class="heading">
+      <h1>Casual Typing</h1>
+      <h1>Work in progress, not ready yet D:</h1>    </div>
     <div class="container">
-      <div class="heading">
-        <h1>Casual Typing</h1>
-        <h1>Work in progress, not ready yet D:</h1>
-      <div class="quote">Click on the area below to start the game.</div>
-      <button class="restart_btn" onclick="resetValues()">Restart</button>
-    </div>
 <div class="content">
-
       <div class="counters">
         <div class="wpm">
           <div class="header_text">Words /min</div>
@@ -63,13 +59,20 @@ SOFTWARE.-->
           <div class="curr_accuracy">100</div>
         </div>
       </div>
-      
+      <div class="interactions">
+        <div class="quote">Click on the area below to start the game.</div>
+
+<div class="input">
       <textarea
         class="input_area"
         placeholder="start typing here..."
         oninput="processCurrentText()"
         onfocus="startGame()"
       ></textarea>
+      <div class="game-over hidden">
+      <button class="restart_btn" onclick="resetValues()">Restart</button></div>
+    </div>
+    </div>
     </div>
     </div>
 </div>

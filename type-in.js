@@ -12,6 +12,7 @@ let quotes_array = [
   "I just don't trust stairs, they're always up to something.",
   "I told my doctor I heard buzzing, but she said it's just a bug that's going around.",
   "A ship carrying red paint and a ship carrying blue paint collide in the middle of the ocean. Both crews were marooned.",
+  "I asked my dog what's two minus two. He said nothing.",
 ];
 
 // selecting required elements
@@ -26,6 +27,7 @@ let restart_btn = document.querySelector(".restart_btn");
 let cpm_group = document.querySelector(".cpm");
 let wpm_group = document.querySelector(".wpm");
 let error_group = document.querySelector(".errors");
+let end_game_screen = document.querySelector(".game-over");
 let accuracy_group = document.querySelector(".accuracy");
 let soundtrack = [
   new Audio("audio/happy.wav"),
@@ -139,6 +141,7 @@ function resetValues() {
   characterTyped = 0;
   quoteNo = 0;
   input_area.disabled = false;
+  end_game_screen.classList.add("hidden");
 
   input_area.value = "";
   quote_text.textContent = "Click on the area below to start the game.";
@@ -188,6 +191,7 @@ function finishGame() {
 
   // disable the input area
   input_area.disabled = true;
+  end_game_screen.classList.remove("hidden");
 
   // show finishing text
   quote_text.textContent = "Click on Restart to start a new game.";
