@@ -1,41 +1,49 @@
 body { 
     background-color: peachpuff; 
-    color: black; 
+    color: dimgray; 
     text-align: center; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 100%;
+    min-width: 450px;
     } 
     
-    .container { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    } 
+    h1 {
+        font-size: 2.6rem; 
+    }
+
     
-    .counters { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    } 
+    .content{
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        box-shadow: lavender 5px 8px 5px; 
+        border-radius: 30px; 
+
+    }
 
     .heading { 
     margin-bottom: 20px; 
     font-size: 3rem; 
-    color: black; 
+    color: dimgray; 
+    min-height: 285;
     } 
     
-    .header { 
+    .counters { 
     display: flex; 
-    align-items: center; 
+    align-items: flex-end; 
+    flex-direction: column;
     } 
     
     .timer, .errors, .accuracy, 
     .cpm, .wpm { 
-    background-color: #ccda46; 
+    background-color: lavender; 
     height: 60px; 
     width: 70px; 
     margin: 8px; 
     padding: 12px; 
-    border-radius: 20%; 
-    box-shadow: black 5px 8px 5px; 
+    border-radius: 13px; 
+    box-shadow: rgb(220, 220, 241) 5px 8px 5px; 
     } 
     
     .cpm, .wpm { 
@@ -55,34 +63,45 @@ body {
     } 
     
     .quote { 
-    background-color: gre; 
     font-size: 1.5rem; 
-    margin: 10px; 
-    padding: 25px; 
-    box-shadow: black 5px 8px 5px; 
+    margin-bottom: 30px;
+    padding: 0px; 
+    align-self: start;
+    text-align: start;
+    min-width: 100%;
+    min-height: 120px;
+
     } 
     
     .input_area { 
     background-color: lemonchiffon; 
-    height: 80px; 
-    width: 40%; 
+    height: 500px; 
+    width: 60%; 
     font-size: 1.5rem; 
     font-weight: 600; 
     margin: 15px; 
     padding: 20px; 
-    border: 0px; 
-    box-shadow: black 5px 8px 5px; 
+    border: lavender 2px; 
+    outline: none;
     } 
     
     .restart_btn { 
     display: none; 
-    background-color: #326765; 
+    background-color: thistle; 
     font-size: 1.5rem; 
-    padding: 10px; 
-    border: 0px; 
-    box-shadow: black 5px 8px 5px; 
+    padding: 4px;
+    margin-bottom: 3px;
+    border: 3px mediumpurple solid;
+    border-radius: 13px;
+    box-shadow: lavender 5px 8px 5px;
+    max-width: 30%;
     } 
     
+    .restart_btn:hover {
+        cursor: pointer;
+        background-color: lavender; 
+        box-shadow: thistle 5px 8px 5px;
+    }
     .incorrect_char { 
     color: coral; 
     text-decoration: underline; 

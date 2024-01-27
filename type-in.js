@@ -1,16 +1,14 @@
 //-- > VARIABLES < --//
 // define the time limit
-let TIME_LIMIT = 60;
+let TIME_LIMIT = 5;
 
 // define quotes to be used
 let quotes_array = [
   "Flog.",
-  "Push yourself, because no one else is going to do it for you.",
-  "Failure is the condiment that gives success its flavor.",
-  "Wake up with determination. Go to bed with satisfaction.",
-  "It's going to be hard, but hard does not mean impossible.",
-  "Learning never exhausts the mind.",
-  "The only way to do great work is to love what you do.",
+  "If cats looked like frogs we'd realize what nasty, cruel little bastards they are. Style. That's what people remember.",
+  "I would like to see anyone, prophet, king or God, convince a thousand cats to do the same thing at the same time.",
+  "The only thing a cat worries about is what's happening right now. As we tell the kittens, you can only wash one paw at a time.",
+  "It is better to begin the journey, make some mistakes and correct your course, than to wait until everything is perfect and never even start.",
 ];
 
 // selecting required elements
@@ -134,7 +132,7 @@ function resetValues() {
 
   input_area.value = "";
   quote_text.textContent = "Click on the area below to start the game.";
-  accuracy_text.textContent = 100;
+  accuracy_text.textContent = 0;
   timer_text.textContent = timeLeft + "s";
   error_text.textContent = 0;
   restart_btn.style.display = "none";
