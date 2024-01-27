@@ -4,7 +4,7 @@ let TIME_LIMIT = 5;
 
 // define quotes to be used
 let quotes_array = [
-  "Flog.",
+  "It always begins with a challenge.",
   "If cats looked like frogs we'd realize what nasty, cruel little bastards they are. Style. That's what people remember.",
   "I would like to see anyone, prophet, king or God, convince a thousand cats to do the same thing at the same time.",
   "The only thing a cat worries about is what's happening right now. As we tell the kittens, you can only wash one paw at a time.",
@@ -24,6 +24,11 @@ let cpm_group = document.querySelector(".cpm");
 let wpm_group = document.querySelector(".wpm");
 let error_group = document.querySelector(".errors");
 let accuracy_group = document.querySelector(".accuracy");
+let soundtrack = [
+  new Audio("audio/happy.wav"),
+  new Audio("audio/darkness.wav"),
+];
+let audio = new Audio("audio/happy.wav");
 
 let timeLeft = TIME_LIMIT;
 let timeElapsed = 0;
@@ -114,6 +119,8 @@ function processCurrentText() {
 function startGame() {
   resetValues();
   updateQuote();
+  audio.play();
+  //  darkness();
 
   // clear old and start a new timer
   clearInterval(timer);
@@ -158,17 +165,29 @@ function updateTimer() {
   }
 }
 
+//-- > PLAY MUSIC < --//
+
+//-- > DARKNESS  < --//
+
+function darkness() {
+  if (accuracy < 70) {
+    audio = new Audio("audio/darkness.wav");
+  }
+}
+
 //-- > END GAME, PROMPT RESTART & WPM CALCULATION SCORE  < --//
 
 function finishGame() {
   // stop the timer
   clearInterval(timer);
+  audio.pause();
+  audio.currentTime = 0;
 
   // disable the input area
   input_area.disabled = true;
 
   // show finishing text
-  quote_text.textContent = "Click on restart to start a new game.";
+  quote_text.textContent = "Click on Restart to start a new game.";
 
   // display restart button
   restart_btn.style.display = "block";

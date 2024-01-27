@@ -26,12 +26,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.-->
 
-    <!-- link the CSS file here -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.38.3/css-doodle.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
+        <!-- link the CSS file here -->
+        <link rel="stylesheet" href="style.css" />
   </head>
 <body>
-
+    <!-- link the JavaScript file here -->
+    <script defer src="type-in.js"></script>
     <div class="container">
       <div class="heading">
         <h1>Casual Typing</h1>
@@ -42,15 +42,15 @@ SOFTWARE.-->
 
       <div class="counters">
         <div class="wpm">
-          <div class="header_text">WPM</div>
+          <div class="header_text">Words /min</div>
           <div class="curr_wpm">100</div>
         </div>
         <div class="cpm">
-          <div class="header_text">CPM</div>
+          <div class="header_text">Char /min</div>
           <div class="curr_cpm">100</div>
         </div>
         <div class="errors">
-          <div class="header_text">Errors</div>
+          <div class="header_text">Mistakes</div>
           <div class="curr_errors">0</div>
         </div>
         <div class="timer">
@@ -68,19 +68,13 @@ SOFTWARE.-->
         placeholder="start typing here..."
         oninput="processCurrentText()"
         onfocus="startGame()"
-      >
-      </textarea>
+      ></textarea>
 
     </div>
 
     </div>
 </div>
 
-
-
-    <!-- link the JavaScript file here -->
-    <script src="type-in.js"></script>
-
-
   </body>
+
 </html>
