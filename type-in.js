@@ -1,6 +1,6 @@
 //-- > VARIABLES < --//
 // define the time limit
-let TIME_LIMIT = 5;
+let TIME_LIMIT = 60;
 
 // define quotes to be used
 let quotes_array = [
