@@ -1,30 +1,47 @@
 body { 
-    background-color: peachpuff; 
+    background-color: lemonchiffon; 
     color: dimgray; 
     text-align: center; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: auto;
-    min-width: 450px;
+    width: 100%;
+    margin: 0px;
 
     } 
     
     h1 {
         font-size: 2.6rem; 
     }
+    
+    h2 {
+        font-size: 1.6rem; 
+    }
+
+    h3{
+        font-size:  1.4rem;
+        margin: 0px;
+    }
 
     .container {
-        background-color: dimgray; 
-        min-height: 60%;
+        display: flex;
+        /* background-color: dimgray;  */
+        min-height: 62%;
+        justify-content: center;
+        justify-self: center;
     }
     
-    .input {
-        background-color: pink; 
-    }
+    /* .input {
+        /* background-color: pink;  
+    } */
     
     .interactions {
-        background-color: dimgray;
-        min-width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        /* background-color: dimgray; */
         min-height: 60%;
+        width: 80%;
+
     }
     
     .content{
@@ -34,7 +51,9 @@ body {
         justify-content: space-between;
         box-shadow: lavender 5px 8px 5px; 
         border-radius: 30px; 
-        min-height: 60%;
+        width: 80%;
+        padding: 15px;
+
     }
 
     .heading { 
@@ -47,7 +66,10 @@ body {
     display: flex; 
     align-items: flex-end; 
     flex-direction: column;
+    background-color: aliceblue; 
+    z-index: 5;
     } 
+
     
     .timer, .errors, .accuracy, 
     .cpm, .wpm { 
@@ -57,9 +79,18 @@ body {
     margin: 8px; 
     padding: 12px; 
     border-radius: 13px; 
-    box-shadow: rgb(220, 220, 241) 5px 8px 5px; 
+    box-shadow: rgb(220, 220, 241) 5px 8px 5px;
+    /* box-shadow: lavenderblush 5px 8px 5px; */
+
     } 
     
+    .score-header{
+        height: 20px; 
+        width: 70px; 
+        margin-bottom: 5px;
+        margin-top: 9px;
+        align-self: center;
+    }
     .cpm, .wpm { 
     display: none; 
     } 
@@ -77,28 +108,32 @@ body {
     } 
     
     .quote { 
-    font-size: 1.5rem; 
-    margin: 10px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 7px;
     padding: 4px; 
     align-self: start;
     text-align: start;
     min-height: 120px;
+    width: 97%;
     background-color: lightcyan;
     border-radius: 13px;
-    box-shadow: lavenderblush 5px 8px 5px;;
+    box-shadow: rgb(220, 220, 241) 5px 8px 5px;
     } 
     
     .input_area {
-        display: block;
-    position: fixed;
     background-color: lemonchiffon; 
-    height: 300px; 
-    font-size: 1.5rem; 
+    height: 300px;
+    width: 98%; 
+    font-size: 1.5rem;
+    margin: 5px;
     font-weight: 600; 
-    margin: 15px; 
     padding: 20px; 
     border: lavender 2px; 
+    border-radius: 6px;
+    box-shadow: rgb(220, 220, 241) 5px 8px 5px;
     outline: none;
+
     } 
 
     .input_area:focus{
@@ -124,9 +159,9 @@ body {
     font-size: 3rem; 
     padding: 10px;
     margin: 3px;
-    border: 3px mediumpurple solid;
+    border: 3px rgb(213, 213, 245) double;
     border-radius: 13px;
-    box-shadow: lavender 5px 8px 5px;
+    box-shadow: thistle 5px 8px 5px;
 
     display: flex;
     justify-content: center;
@@ -139,18 +174,20 @@ body {
     
     .restart_btn:hover {
         cursor: pointer;
-        background-color: lavender; 
-        box-shadow: thistle 5px 8px 5px;
+        background-color: lavenderblush; 
+        box-shadow: lavender 5px 8px 5px;
     }
     .incorrect_char { 
-    color: coral; 
-    text-decoration: underline; 
+    color: orange; 
+    text-decoration: underline;
     } 
     
     .correct_char { 
-    color: darkgreen; 
+    color: mediumslateblue; 
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px rgba(0, 0, 255, 0.363), 0 0 5px rgba(0, 0, 139, 0.5);
     } 
-    
+
+
     .hidden {
         display: none;
       }
