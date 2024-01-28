@@ -1,6 +1,8 @@
+
+
 body { 
-    background-color: lemonchiffon; 
-    color: dimgray; 
+    /* background-color: lemonchiffon;  */
+    color: dimgray;
     text-align: center; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: auto;
@@ -14,12 +16,12 @@ body {
     }
     
     h2 {
-        font-size: 1.6rem; 
+        font-size: 1.6rem;
     }
 
     h3{
         font-size:  1.4rem;
-        margin: 0px;
+        margin:0;
     }
 
     .container {
@@ -87,8 +89,8 @@ body {
     .score-header{
         height: 20px; 
         width: 70px; 
-        margin-bottom: 5px;
-        margin-top: 9px;
+        margin-bottom: 3px;
+        margin-top: 3px;
         align-self: center;
     }
     .cpm, .wpm { 
@@ -142,7 +144,7 @@ body {
 .game-over {
     position: absolute;
     background-color: rgba(216, 191, 216, 0.781); 
-    top: 90;
+    top: 110px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -192,20 +194,41 @@ body {
         display: none;
       }
 
-    /* .area{
-        background: #4e54c8;  
-        background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-        width: 100%;
-        height:100vh;
-    }
-    
-    .circles{
+    .area{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        background: lemonchiffon;  
+        z-index: -5;
+    }
+    
+    .background {
+        background-color: lemonchiffon;
+      }
+      
+      /* .foreground {
+        mask-image: radial-gradient(var(--size), rgba(0,0,0,1) 40%, rgba(0,0,0,0) 60%);
+        mask-position: 10% 10%;
+      } */
+
+      .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: none;
+      }
+
+    /* .circles{
+        position: absolute;
+        top: 0;
+        left: 0;
         overflow: hidden;
+        z-index: -3;
     }
     
     .circles li{
@@ -217,5 +240,6 @@ body {
         background: rgba(255, 255, 255, 0.2);
         animation: animate 25s linear infinite;
         bottom: -150px;
+        z-index: -3;
         
     } */

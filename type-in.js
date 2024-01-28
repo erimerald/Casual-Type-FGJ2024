@@ -1,12 +1,14 @@
 //-- > VARIABLES < --//
 // define the time limit
-let TIME_LIMIT = 5;
+let TIME_LIMIT = 15;
 
 // define quotes to be used
 let quotes_array = [
   "It always begins with a challenge.",
-  "The coach went to the bank to get his quarterback.",
+  "I was worried I might have a gambling problem, but then I realized that I'm just playing the cards that I was dealt.",
   "Ghosts are bad liars because you can see right through them.",
+  "The coach went to the bank to get his quarterback.",
+  "I'm reading a book about anti-gravity, it's impossible to put down.",
   "Dogs can't operate MRI machines but catscan.",
   "I used to play piano by ear, but now I use my hands.",
   "I just don't trust stairs, they're always up to something.",
@@ -33,7 +35,10 @@ let soundtrack = [
   new Audio("audio/happy.wav"),
   new Audio("audio/darkness.wav"),
 ];
-let audio = new Audio("audio/happy.wav");
+
+let audioPaused = true;
+let audioHappy = new Audio("audio/happy.wav");
+let audioDarkness = new Audio("audio/darkness.wav");
 
 let timeLeft = TIME_LIMIT;
 let timeElapsed = 0;
@@ -106,6 +111,7 @@ function processCurrentText() {
   let correctCharacters = characterTyped - (total_errors + errors);
   let accuracyVal = (correctCharacters / characterTyped) * 100;
   accuracy_text.textContent = Math.round(accuracyVal);
+  darkness();
 
   // if current text is completely typed
   // irrespective of errors
@@ -124,8 +130,7 @@ function processCurrentText() {
 function startGame() {
   resetValues();
   updateQuote();
-  audio.play();
-  //  darkness();
+  // audioHappy.play();
 
   // clear old and start a new timer
   clearInterval(timer);
@@ -176,18 +181,34 @@ function updateTimer() {
 //-- > DARKNESS  < --//
 
 function darkness() {
-  if (accuracy < 70) {
-    audio = new Audio("audio/darkness.wav");
-  }
+  if (errors > 16 && audioHappy.play(true)) {
+    audioHappy.pause();
+    audioDarkness.play();
+    console.log(errors);
+  } else if (errors <= 15 && audioDarkness.play(true)) audioDarkness.pause();
+  audioHappy.play();
+  console.log(errors);
+  // audioDarkness.play();
 }
+
+// let size = errors;
+
+// function draw() {
+//   document.documentElement.style.setProperty("--size", size);
+//   requestAnimationFrame(draw);
+// }
+
+// requestAnimationFrame(draw);
 
 //-- > END GAME, PROMPT RESTART & WPM CALCULATION SCORE  < --//
 
 function finishGame() {
   // stop the timer
   clearInterval(timer);
-  audio.pause();
-  audio.currentTime = 0;
+  audioHappy.currentTime = 0;
+  audioDarkness.currentTime = 0;
+  audioHappy.pause();
+  audioDarkness.pause();
 
   // disable the input area
   input_area.disabled = true;
