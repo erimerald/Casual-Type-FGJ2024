@@ -1,7 +1,7 @@
 
 
 body { 
-    /* background-color: lemonchiffon;  */
+    background-color: lemonchiffon; 
     color: dimgray;
     text-align: center; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -222,6 +222,15 @@ body {
         background-size: cover;
         background-repeat: none;
       }
+
+    .sources {
+        position: absolute;
+        bottom: 0;
+        left: 3px;
+        align-items: center;
+    }
+
+
 
     /* .circles{
         position: absolute;

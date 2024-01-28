@@ -1,10 +1,11 @@
 //-- > VARIABLES < --//
 // define the time limit
-let TIME_LIMIT = 15;
+let TIME_LIMIT = 60;
 
 // define quotes to be used
 let quotes_array = [
   "It always begins with a challenge.",
+  "And they who light upon this book should bear in mind not only that I write for the clearing of our parish from ill fame and calumny, but also a thing which will, I trow, appear too often in it, to wit—that I am nothing more than a plain unlettered man, not read in foreign languages, as a gentleman might be, nor gifted with long words (even in mine own tongue), save what I may have won from the Bible or Master William Shakespeare, whom, in the face of common opinion, I do value highly. In short, I am an ignoramus, but pretty well for a yeoman.",
   "I was worried I might have a gambling problem, but then I realized that I'm just playing the cards that I was dealt.",
   "Ghosts are bad liars because you can see right through them.",
   "The coach went to the bank to get his quarterback.",
